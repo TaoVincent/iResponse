@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f0f0f0" >
+    
+<!-- 顶部标题栏 -->
+	 <LinearLayout
+	    android:id="@+id/Line_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        android:weightSum="8" >
+
+        <Button
+            android:id="@+id/button_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/exit" />
+
+        <TextView
+            android:id="@+id/textView_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:gravity="center"
+            android:text="@string/app_name" />
+
+        <Button
+            android:id="@+id/button_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/more" />
+    </LinearLayout>
+	
+	
+<!-- ListView -->
+	
+<!-- 底部导航栏 -->
+
+    <LinearLayout
+        android:id="@+id/Line_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:weightSum="4"
+        android:orientation="horizontal"
+        android:background="#ffffff"
+        android:gravity="center"
+       >
+		
+         <Button 
+            android:id="@+id/btn_msg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:drawableTop="@drawable/tab_menu_msg"
+            style="?android:attr/buttonStyle"
+            android:text="@string/message" 
+            android:textColor="#000000"/>
+
+
+        <Button 
+            android:id="@+id/btn_course"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:drawableTop="@drawable/tab_menu_course"
+            style="?android:attr/buttonStyle"
+            android:text="@string/course" 
+            android:textColor="#000000"/>
+         <Button 
+            android:id="@+id/btn_teach"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:drawableTop="@drawable/tab_menu_teach"
+            style="?android:attr/buttonStyle"
+            android:text="@string/teach"
+            android:textColor="#000000"/>
+         
+        <Button 
+            android:id="@+id/btn_myself"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:drawableTop="@drawable/tab_menu_myself"
+            style="?android:attr/buttonStyle"
+            android:text="@string/myself"
+            android:textColor="#000000"/> 
+    </LinearLayout>
+    
+    
+	   <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/Line_top"
+        android:layout_above="@id/Line_bottom"
+        android:background="#f0f0f0">
+    </FrameLayout>
+	
+</RelativeLayout>
