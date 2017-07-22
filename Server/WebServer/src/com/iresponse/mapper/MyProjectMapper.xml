@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.iresponse.dao.iresponseDao">
+	
+	<resultMap type="com.iresponse.model.Project" id="ProjectResultMap">
+		<id property="id" column="id" />
+		<result property="name" column="name" />
+		
+		<!-- 嵌套查询 -->
+		<association property="date" column="date" select="getDate"/>
+	</resultMap>
+
+	<select id="getProjectsCount" parameterType="String" resultType="java.lang.Integer">
+		select count(*)
+		from project
+	</select>
+	
+	
+	<select id="getProjectById" parameterType="String" resultMap="ProjectResultMap">
+		select *
+		from project
+		where id=#{id}
+	</select>
+
+	<select id="getProjectsJson" parameterType="Map" resultMap="ProjectResultMap">
+		select *
+		from project
+		
+        <if test="sort != null and order != null" >
+            order by ${sort} ${order}
+        </if>
+
+        limit #{offset},#{limit}
+	</select>
+	
+	<select id="getProjectsList" parameterType="String" resultMap="ProjectResultMap">
+		select *
+		from project
+        limit #{offset},#{limit}
+	</select>
+	
+	
+
+	<select id="addProject" parameterType="com.iresponse.model.Project" resultMap="ProjectResultMap">
+		insert into project (
+		id,name
+		) values (
+		#{id,jdbcType=VARCHAR},
+		#{name,jdbcType=LONGVARCHAR}
+		);
+	</select>
+
+	<select id="getDate" parameterType="String" resultType="java.util.Date">
+		select date
+		from project
+		where id = #{id}
+	</select>
+
+</mapper>

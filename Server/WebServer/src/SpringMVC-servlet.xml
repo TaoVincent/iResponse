@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                           http://www.springframework.org/schema/beans/spring-beans-4.0.xsd 
+                           http://www.springframework.org/schema/mvc 
+                           http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd 
+                           http://www.springframework.org/schema/context 
+                           http://www.springframework.org/schema/context/spring-context-4.0.xsd 
+                           http://www.springframework.org/schema/aop 
+                           http://www.springframework.org/schema/aop/spring-aop-4.0.xsd 
+                           http://www.springframework.org/schema/tx 
+                           http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+ 
+  <!-- 启用spring mvc 注解 -->  
+  <context:annotation-config />  
+   <!-- 使用annotation 自动注册bean,并保证@Required,@Autowired,@Controller的属性被注入， 包路径自己修改--> 
+  <mvc:annotation-driven/>
+    
+  <!-- 设置使用注解的类所在的jar包 -->
+  <context:component-scan base-package="com.iresponse.controller" />
+  <context:component-scan base-package="com.iresponse.service" />
+  <context:component-scan base-package="com.iresponse.dao" />
+
+    <!-- 配置响应体Controller直接返回对象的JSON -jackson-->
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+        <property name="messageConverters">
+            <list>
+                <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+                    <property name="supportedMediaTypes">
+                        <list>
+                            <value>text/html;charset=UTF-8</value>
+                        </list>
+                    </property>
+                </bean>
+            </list>
+        </property>
+    </bean>
+ 
+</beans>
