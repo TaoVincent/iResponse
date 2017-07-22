@@ -12,3 +12,4 @@ public interface IProjectService {
 	List<Project> getProjectsList(int offset,int limit);
 	void addProject(Project obj);
 }
+ 
