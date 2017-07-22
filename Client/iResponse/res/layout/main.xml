@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#f0f0f0" >
-    
+     
 <!-- 顶部标题栏 -->
 	 <LinearLayout
 	    android:id="@+id/Line_top"
