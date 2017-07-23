@@ -19,7 +19,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/exit" />
+            android:text="@string/exit" 
+            android:background="@drawable/mybutton"/>
 
         <TextView
             android:id="@+id/textView_top"
@@ -34,7 +35,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/more" />
+            android:text="@string/more" 
+            android:background="@drawable/mybutton"/>
     </LinearLayout>
 	
 	

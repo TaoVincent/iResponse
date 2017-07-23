@@ -3,6 +3,7 @@ package com.dachuang.iresponse;
 import android.app.Activity;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -18,7 +19,8 @@ public class Main extends Activity implements OnClickListener{
 	private Button more;
 	
 
-    private Fragement f1,f2,f3,f4;
+    private Fragement f2,f3,f4;
+    private Message f1;
  	
 	
 	
@@ -76,11 +78,11 @@ public class Main extends Activity implements OnClickListener{
         hideAllFragment(transaction);
         switch(v.getId()){
             case R.id.btn_msg:
-            	Toast.makeText(this, "123", Toast.LENGTH_LONG).show();
-                selected();
+            	selected();
                 msg.setSelected(true);
                 if(f1==null){
-                    f1 = new Fragement("µÚÒ»¸öFragment");
+                    f1 = new Message();
+                    Log.i("F1 ok", "F1 ok");
                     transaction.add(R.id.fragment_container,f1);
                 }else{
                     transaction.show(f1);

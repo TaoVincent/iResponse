@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -20,6 +21,7 @@ public class Register extends Activity implements OnClickListener, OnCheckedChan
 	private RadioButton radio_admistor;
 	private RadioButton radio_teacher;
 	private RadioGroup radio;
+
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,8 @@ public class Register extends Activity implements OnClickListener, OnCheckedChan
 		btn_next.setOnClickListener(this);
 
 		radio.setOnCheckedChangeListener(this);
+		
+		
 
 	}
 
@@ -57,6 +61,7 @@ public class Register extends Activity implements OnClickListener, OnCheckedChan
 		// TODO Auto-generated method stub
 		FragmentTransaction transaction = getFragmentManager().beginTransaction();
 		hideAllFragment(transaction);
+		
 		switch (id) {
 		case R.id.radio_superAdmistor:	          
             if(admistor == null) {
