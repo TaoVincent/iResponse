@@ -54,7 +54,7 @@ public class Message extends Fragment implements SearchView.OnQueryTextListener 
 			dataList.add(map);
 		}  
 
-		return dataList;
+		return dataList; 
 	}
 
 	@Override
