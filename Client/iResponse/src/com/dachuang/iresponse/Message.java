@@ -52,7 +52,7 @@ public class Message extends Fragment implements SearchView.OnQueryTextListener 
 			map.put("msg", msg[i]);
 
 			dataList.add(map);
-		}
+		} 
 
 		return dataList;
 	}
