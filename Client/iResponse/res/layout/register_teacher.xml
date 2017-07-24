@@ -2,85 +2,85 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical" 
-    android:gravity="center">
-    
-	 <EditText 
-  		    android:layout_width="200dp"
-  		    android:layout_height="40dp"
-  		    android:drawableLeft="@drawable/iconic"
-  		    android:drawablePadding="15dp"
-  		    android:hint="@string/name"
-  		    android:inputType="text"
-  		    android:textSize="13sp"
-  		    android:textColorHint="#000000"
-  		    />
-	
-	   <EditText 
-  		    android:layout_width="200dp"
-  		    android:layout_height="40dp"
-  		    android:drawableLeft="@drawable/iconic"
-  		    android:drawablePadding="15dp"
-  		    android:hint="@string/password"
-  		    android:inputType="textPassword"
-  		    android:textSize="13sp"
-  		    android:textColorHint="#000000"
-  		    />
-	
-	  
-	  <EditText 
-  		    android:layout_width="200dp"
-  		    android:layout_height="40dp"
-  		    android:drawableLeft="@drawable/iconic"
-  		    android:drawablePadding="15dp"
-  		    android:hint="@string/college"
-  		    android:inputType="text"
-  		    android:textSize="13sp"
-  		    android:textColorHint="#000000"
-  		    />
-	  <EditText 
-  		    android:layout_width="200dp"
-  		    android:layout_height="40dp"
-  		    android:drawableLeft="@drawable/iconic"
-  		    android:drawablePadding="15dp"
-  		    android:hint="@string/school"
-  		    android:inputType="text"
-  		    android:textSize="13sp"
-  		    android:textColorHint="#000000"
-  		    />
-	   <EditText 
-  		    android:layout_width="200dp"
-  		    android:layout_height="40dp"
-  		    android:drawableLeft="@drawable/iconic"
-  		    android:drawablePadding="15dp"
-  		    android:hint="@string/eMail"
-  		    android:inputType="textEmailAddress"
-  		    android:textSize="13sp"
-  		    android:textColorHint="#000000"
-  		    />
-	
-	   <EditText 
-  		    android:layout_width="200dp"
-  		    android:layout_height="40dp"
-  		    android:drawableLeft="@drawable/iconic"
-  		    android:drawablePadding="15dp"
-  		    android:hint="@string/phone"
-  		    android:inputType="textPhonetic"
-  		    android:textSize="13sp"
-  		    android:textColorHint="#000000"
-  		    />
-	
-	  
-	  <EditText 
-  		    android:layout_width="200dp"
-  		    android:layout_height="40dp"
-  		    android:drawableLeft="@drawable/iconic"
-  		    android:drawablePadding="15dp"
-  		    android:hint="@string/identity"
-  		    android:inputType="number"
-  		    android:textSize="13sp"
-  		    android:textColorHint="#000000"
-  		    />
+    android:gravity="center"
+    android:orientation="vertical" >
 
+    <EditText
+        android:id="@+id/userName"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:drawableLeft="@drawable/iconic"
+        android:drawablePadding="15dp"
+        android:hint="@string/name"
+        android:inputType="text"
+        android:textColorHint="#000000"
+        android:text="123"
+        android:textSize="13sp" />
+
+    <EditText
+        android:id="@+id/pswd"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:drawableLeft="@drawable/iconic"
+        android:drawablePadding="15dp"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:textColorHint="#000000"
+        android:textSize="13sp" />
+
+    <EditText
+        android:id="@+id/college"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:drawableLeft="@drawable/iconic"
+        android:drawablePadding="15dp"
+        android:hint="@string/college"
+        android:inputType="text"
+        android:textColorHint="#000000"
+        android:textSize="13sp" />
+
+    <EditText
+        android:id="@+id/school"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:drawableLeft="@drawable/iconic"
+        android:drawablePadding="15dp"
+        android:hint="@string/school"
+        android:inputType="text"
+        android:textColorHint="#000000"
+        android:textSize="13sp" />
+
+    <EditText
+        android:id="@+id/eMail"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:drawableLeft="@drawable/iconic"
+        android:drawablePadding="15dp"
+        android:hint="@string/eMail"
+        android:inputType="textEmailAddress"
+        android:textColorHint="#000000"
+        android:textSize="13sp" />
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:drawableLeft="@drawable/iconic"
+        android:drawablePadding="15dp"
+        android:hint="@string/phone"
+        android:inputType="textPhonetic"
+        android:textColorHint="#000000"
+        android:textSize="13sp" />
+
+    <EditText
+        android:id="@+id/identity"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:drawableLeft="@drawable/iconic"
+        android:drawablePadding="15dp"
+        android:hint="@string/identity"
+        android:inputType="number"
+        android:textColorHint="#000000"
+        android:textSize="13sp" />
 
 </LinearLayout>

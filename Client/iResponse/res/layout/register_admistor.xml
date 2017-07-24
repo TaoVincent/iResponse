@@ -1,53 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="match_parent"   
     android:layout_height="wrap_content"
-    android:gravity="center"
     android:layout_gravity="center"
+    android:gravity="center"
     android:orientation="vertical" >
 
-   <EditText 
-  		    android:layout_width="200dp"
-  		    android:layout_height="40dp"
-  		    android:drawableLeft="@drawable/iconic"
-  		    android:drawablePadding="15dp"
-  		    android:hint="@string/school"
-  		    android:inputType="text|none"
-  		    android:textSize="13sp"
-  		    android:textColorHint="#000000"
-  		    />
-	
-	   <EditText 
-  		    android:layout_width="200dp"
-  		    android:layout_height="40dp"
-  		    android:drawableLeft="@drawable/iconic"
-  		    android:drawablePadding="15dp"
-  		    android:hint="@string/password"
-  		    android:inputType="textPassword"
-  		    android:textSize="13sp"
-  		    android:textColorHint="#000000"
-  		    />
-	
-	  
-	  <EditText 
-  		    android:layout_width="200dp"
-  		    android:layout_height="40dp"
-  		    android:drawableLeft="@drawable/iconic"
-  		    android:drawablePadding="15dp"
-  		    android:hint="@string/eMail"
-  		    android:inputType="textEmailAddress"
-  		    android:textSize="13sp"
-  		    android:textColorHint="#000000"
-  		    />
-	  <EditText 
-  		    android:layout_width="200dp"
-  		    android:layout_height="40dp"
-  		    android:drawableLeft="@drawable/iconic"
-  		    android:drawablePadding="15dp"
-  		    android:hint="@string/phone"
-  		    android:inputType="textPassword"
-  		    android:textSize="13sp"
-  		    android:textColorHint="#000000"
-  		    />
+    <EditText
+        android:id="@+id/schoolName"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:drawableLeft="@drawable/iconic"
+        android:drawablePadding="15dp"
+        android:hint="@string/school"
+        android:inputType="text|none"
+        android:textColorHint="#000000"
+        android:textSize="13sp" />
+
+    <EditText
+        android:id="@+id/pswd"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:drawableLeft="@drawable/iconic"
+        android:drawablePadding="15dp"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:textColorHint="#000000"
+        android:textSize="13sp" />
+
+    <EditText
+        android:id="@+id/eMail"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:drawableLeft="@drawable/iconic"
+        android:drawablePadding="15dp"
+        android:hint="@string/eMail"
+        android:inputType="textEmailAddress"
+        android:textColorHint="#000000"
+        android:textSize="13sp" />
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:drawableLeft="@drawable/iconic"
+        android:drawablePadding="15dp"
+        android:hint="@string/phone"
+        android:inputType="textPassword"
+        android:textColorHint="#000000"
+        android:textSize="13sp" />
 
 </LinearLayout>
